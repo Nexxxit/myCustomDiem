@@ -13,7 +13,7 @@ import Dropdown from "../../../ud-ui/dropdown/ui/Dropdown.vue";
       <Button title="Сегодняшняя дата" on-click="" text="Сегодня" class="py-1 px-2 rounded-full text-lg" />
     </div>
     <Navigation/>
-<!--    <Dropdown />-->
+    <Dropdown />
   </header>
 </template>
 

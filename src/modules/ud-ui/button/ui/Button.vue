@@ -1,6 +1,5 @@
 <script setup lang="ts">
 interface Props {
-  onClick: () => void
   title: string
   text?: string
 }
@@ -11,7 +10,7 @@ defineProps<Props>()
 <template>
   <button class="flex items-center gap-1 border backdrop-blur-lg bg-white/50 border-white/30 shadow
   hover:bg-white/10 hover:border-black/10 hover:cursor-pointer active:bg-black/3 active:border-black/10"
-          @click="onClick" :title="title">
+          :title="title">
     {{ text }}
     <slot name="icon"></slot>
   </button>

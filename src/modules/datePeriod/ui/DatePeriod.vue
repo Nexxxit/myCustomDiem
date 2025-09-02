@@ -4,11 +4,12 @@ interface Props {
 }
 
 defineProps<Props>()
+
 </script>
 
 <template>
   <div>
-    <p class="arsenal-sc-bold text-2xl">{{currentPeriod}}</p>
+    <p class="arsenal-sc-bold text-2xl">{{ currentPeriod }}</p>
   </div>
 </template>
 

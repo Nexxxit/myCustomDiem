@@ -14,7 +14,7 @@ const date = new Date().toLocaleDateString(undefined, {
 
 <template>
   <div class="flex gap-3 items-center justify-center">
-    <Button on-click="" title="Предыдущая дата" class-name="p-2 rounded-full justify-center">
+    <Button on-click="" title="Предыдущая дата" class="p-2 rounded-full justify-center">
       <template #icon>
         <ChevronLeft />
       </template>
@@ -22,7 +22,7 @@ const date = new Date().toLocaleDateString(undefined, {
 
     <CurrentPeriod :current-period="date" />
 
-    <Button on-click="" title="Следующая дата" class-name="p-2 rounded-full justify-center">
+    <Button on-click="" title="Следующая дата" class="p-2 rounded-full justify-center">
       <template #icon>
         <ChevronRight />
       </template>

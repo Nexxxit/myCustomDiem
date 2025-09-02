@@ -3,16 +3,20 @@
 import Button from "../../button/ui/Button.vue";
 import ChevronDown from "../../../../assets/ChevronDown.vue";
 import {ref} from "vue";
+import {useSelectView} from "../store/useSelectView.ts";
+import {storeToRefs} from "pinia";
 
-const array = ref(["День", "Неделя", "Месяц", "Год", "4 дня", "Расписание"])
-const selectedMode = ref('День')
+const datePeriods = ref(["День", "Неделя", "Месяц", "Год", "4 дня", "Расписание"])
+const selectView = useSelectView()
+const {selectedView} = storeToRefs(selectView)
+
 const isActive = ref(false)
 
 </script>
 
 <template>
   <div class="relative justify-self-end">
-    <Button title="Выбрать период" @click="isActive = !isActive" :text="selectedMode"
+    <Button title="Выбрать период" @click="isActive = !isActive" :text="selectedView"
             class="flex justify-center py-1 px-2 rounded-full text-lg min-w-30">
       <template #icon>
         <ChevronDown/>
@@ -22,10 +26,10 @@ const isActive = ref(false)
       <ul class="flex flex-col">
         <li class="p-1 first:rounded-t-2xl last:rounded-b-2xl
         hover:bg-black/5 hover:border-black/10 hover:cursor-pointer active:bg-black/10 active:border-black/10"
-            v-for="item in array"
-            @click="[selectedMode = item, isActive = !isActive]"
+            v-for="datePeriod in datePeriods"
+            @click="[selectedView = datePeriod, isActive = !isActive]"
         >
-          {{ item }}
+          {{ datePeriod }}
         </li>
       </ul>
     </div>

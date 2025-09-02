@@ -3,7 +3,7 @@
 import Button from "../../ud-ui/button/ui/Button.vue";
 import ChevronLeft from "../../../assets/ChevronLeft.vue";
 import ChevronRight from "../../../assets/ChevronRight.vue";
-import CurrentPeriod from "../../currentPeriod/ui/CurrentPeriod.vue";
+import DatePeriod from "../../datePeriod/ui/DatePeriod.vue";
 
 const date = new Date().toLocaleDateString(undefined, {
   year: "numeric",
@@ -20,7 +20,7 @@ const date = new Date().toLocaleDateString(undefined, {
       </template>
     </Button>
 
-    <CurrentPeriod :current-period="date" />
+    <DatePeriod :current-period="date" />
 
     <Button on-click="" title="Следующая дата" class="p-2 rounded-full justify-center">
       <template #icon>
